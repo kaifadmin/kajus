@@ -168,11 +168,37 @@
 }
 
 /* Responsive */
+/* --- MOBILE RESPONSIVENESS (Contact) --- */
 @media (max-width: 900px) {
-    .contact-box-wrapper {
-        flex-direction: column;
-        margin: -50px 20px 50px;
+    /* Header Background */
+    .contact-header-bg { 
+        padding: 100px 20px 100px; /* Reduce bottom padding */
     }
-    .contact-info-side { padding: 40px; }
-    .contact-form-side { padding: 40px 20px; }
+    .contact-header-bg h1 { font-size: 2.5rem; }
+
+    /* Stack the floating card */
+    .contact-box-wrapper { 
+        flex-direction: column; 
+        margin: -40px 15px 40px; /* Smaller margins */
+        min-height: auto;
+    }
+
+    /* Left Side (Info) */
+    .contact-info-side { 
+        padding: 40px 25px; 
+    }
+    .info-header h3 { font-size: 1.5rem; }
+
+    /* Right Side (Form) */
+    .contact-form-side { 
+        padding: 40px 25px; 
+    }
+    .form-title { font-size: 1.8rem; text-align: center; }
+
+    /* Inputs to stack */
+    .contact-form-side form > div {
+        flex-direction: column;
+        gap: 0;
+    }
+    .input-group { width: 100% !important; margin-bottom: 25px; }
 }

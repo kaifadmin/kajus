@@ -46,7 +46,7 @@
 .section-image {
     width: 100%;
     height: 400px;
-    background: url('/images/bg/aboutbg.jpg');
+    background: url('../images/bg/aboutbg.jpg');
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 20px rgba(20, 90, 50, 0.2); /* Green Shadow */

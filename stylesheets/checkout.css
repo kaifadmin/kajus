@@ -54,3 +54,23 @@
 @media (max-width: 800px) {
     .checkout-container { flex-direction: column-reverse; }
 }
+/* --- MOBILE RESPONSIVENESS (Checkout) --- */
+@media (max-width: 900px) {
+    .checkout-container { 
+        flex-direction: column; /* Stack Form then Summary */
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    .form-wrap, .summary-wrap { 
+        width: 100%; 
+        padding: 25px 20px; 
+    }
+
+    /* Stack First/Last name inputs */
+    .form-row { 
+        flex-direction: column; 
+        gap: 0; 
+    }
+    .form-group { margin-bottom: 20px; }
+}

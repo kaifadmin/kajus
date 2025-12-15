@@ -418,16 +418,31 @@ footer ul li:hover {
 }
 
 
-/* --- Responsive Adjustments --- */
+/* --- MOBILE RESPONSIVENESS (Base) --- */
 @media (max-width: 900px) {
-    .about-section {
-        flex-direction: column;
-        gap: 40px;
+    /* Navbar Tweaks */
+    .navbar { padding: 0 20px; height: 65px; }
+    
+    .logo { font-size: 1.4rem; gap: 8px; }
+    .kajulogo { width: 35px; height: 35px; }
+    
+    .nav-links { display: none; } /* Hide Desktop Links */
+    .hamburger { display: block; font-size: 1.6rem; }
+    
+    /* Mobile Menu */
+    .mobile-menu a { font-size: 1.3rem; margin-bottom: 20px; }
+    
+    /* Footer Stacking */
+    footer { margin-top: 40px; padding: 40px 0; }
+    .footer-content { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 30px; 
     }
-
-    .story-section {
-        padding: 30px;
-    }
+    
+    /* Container Padding */
+    .container { padding: 0 20px; }
+    .section-title { font-size: 2rem; margin: 40px 0 30px; }
 }
 
 @media (max-width: 600px) {
@@ -539,7 +554,7 @@ footer ul li:hover {
 */
 .aboutbg {
 
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/images/bg/aboutbg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../images/bg/aboutbg.jpg') center/cover no-repeat;
     background-attachment: fixed;
     /* Parallax effect */
     display: flex;
@@ -569,7 +584,7 @@ footer ul li:hover {
     height: 75px;
     
     /* PUT YOUR IMAGE PATH HERE */
-    background-image: url('/images/bg/logo.png'); 
+    background-image: url('../images/bg/logo.png'); 
     
     background-size: contain;   /* Ensures the whole logo fits */
     background-repeat: no-repeat;
@@ -578,4 +593,4 @@ footer ul li:hover {
 
 .logo span {
     color: var(--primary);
-}
+} 

@@ -1,7 +1,7 @@
 /* --- HERO SECTION --- */
 .hero {
     height: 85vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('/images/bg/homebg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../images/bg/homebg.jpg') center/cover no-repeat;
     background-attachment: fixed; /* Parallax effect */
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     text-align: center; color: white;
@@ -177,12 +177,43 @@
     color: white;
     box-shadow: 0 0 15px rgba(230, 126, 34, 0.4);
 }
-
-/* Responsive */
+/* --- MOBILE RESPONSIVENESS (Home) --- */
 @media (max-width: 900px) {
-    .reviews-grid { grid-template-columns: 1fr; }
-    .newsletter-content { flex-direction: column; text-align: center; }
-    .news-form { width: 100%; }
+    /* Hero Section */
+    .hero { height: 70vh; padding: 0 15px; }
+    .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 15px; }
+    .hero p { font-size: 1rem; max-width: 100%; margin-bottom: 30px; }
+    
+    /* Benefits Grid */
+    .benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+    .benefit-card { padding: 30px 20px; }
+
+    /* Reviews Grid */
+    .reviews-grid { grid-template-columns: 1fr; gap: 20px; }
+    
+    /* Newsletter */
+    .newsletter-content { flex-direction: column; text-align: center; gap: 25px; }
+    .news-text h2 { font-size: 1.8rem; }
+    
+    .news-form { 
+        width: 100%; 
+        flex-direction: column; 
+        background: transparent; 
+        padding: 0;
+        gap: 15px;
+    }
+    
+    .news-form input {
+        background: rgba(255,255,255,0.1);
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .news-form button {
+        width: 100%;
+        padding: 15px;
+    }
 }
 .benefits-section {
     padding: 80px 0;
@@ -232,10 +263,7 @@
     line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-}
+
 @media (max-width: 500px) {
     .benefits-grid { grid-template-columns: 1fr; }
 }
