@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | KAJUS</title>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/cards.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+        <a href="index.html" class="logo">
+    <div class="kajulogo"></div>
+    <div>KAJUS<span>.</span></div>
+</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <div class="nav-icons">
+                
+<div class="cart-icon-wrap" onclick="openCart()">
+    <!-- Premium Cart Icon SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="cart-count">0</span>
+</div>
+
+  
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU & CART -->
+    <div class="mobile-menu">
+        <div class="close-mobile" onclick="toggleMobileMenu()">&times;</div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header"><h3>Your Cart</h3><span style="cursor:pointer;" onclick="closeCart()">X</span></div>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; margin-bottom:15px; font-weight:bold;"><span>Total:</span><span id="cart-total-amount">₹0</span></div>
+            <a href="checkout.html"><button class="btn-primary" style="width:100%;">Checkout</button></a>
+        </div>
+    </div>
+
+    <!-- 1. HEADER SECTION -->
+    <div class="contact-header-bg">
+        <h1>Get in Touch</h1>
+        <p>Have a question or want to place a bulk order? We are here to help.</p>
+    </div>
+
+    <!-- 2. CONTACT BOX (Overlapping) -->
+    <div class="contact-box-wrapper">
+        
+        <!-- Left Side: Info -->
+        <div class="contact-info-side">
+            <div class="info-header">
+                <h3>Contact Information</h3>
+                <p>Fill out the form or reach us via:</p>
+            </div>
+            
+            <div class="info-details">
+                <div class="info-row">
+                    <div class="icon-circle">📍</div>
+                    <div class="text-data">
+                        <h4>Visit Us</h4>
+                        <p>123 Khari Baoli, Old Delhi, India</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="icon-circle">📞</div>
+                    <div class="text-data">
+                        <h4>Call Us</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="icon-circle">✉️</div>
+                    <div class="text-data">
+                        <h4>Email Us</h4>
+                        <p>support@kajus.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="contact-form-side">
+            <h2 class="form-title">Send a Message</h2>
+            
+            <!-- FORM LOGIC ATTACHED HERE -->
+            <form onsubmit="submitContactForm(event)">
+                
+                <div style="display:flex; gap:20px;">
+                    <div class="input-group" style="flex:1;">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Rahul" required>
+                    </div>
+                    <div class="input-group" style="flex:1;">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Sharma" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="rahul@example.com" required>
+                </div>
+
+                
+
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-send">
+                    <span>Send Message</span>
+                    <span id="btn-icon">➤</span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <div class="logo" style="color:white; margin-bottom:15px;">KAJUS<span>.</span></div>
+                <p>Premium dry fruits delivered fresh.</p>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Social</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

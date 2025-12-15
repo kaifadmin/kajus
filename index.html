@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAJUS | Premium Dry Fruits</title>
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/home.css">
+    <link rel="stylesheet" href="stylesheets/cards.css">
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+        <a href="index.html" class="logo">
+    <div class="kajulogo"></div>
+    <div>KAJUS<span>.</span></div>
+</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-icons">
+
+            <div class="cart-icon-wrap" onclick="openCart()">
+                <!-- Premium Cart Icon SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count">0</span>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <div class="close-mobile" onclick="toggleMobileMenu()">&times;</div>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span style="cursor:pointer;" onclick="closeCart()">X</span>
+        </div>
+        <div class="cart-items"></div>
+
+        <!-- Inside <div class="cart-sidebar"> -->
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">₹0</span>
+            </div>
+            <!-- NEW CLASS NAMES -->
+            <a href="checkout.html"><button class="btn-checkout-cart">Proceed to Checkout</button></a>
+            <button class="btn-clear-cart" onclick="clearCart()">Empty Cart</button>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay"></div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Taste the Royal Heritage</h1>
+        <p>India's finest organic dry fruits delivered fresh to your doorstep.</p>
+        <a href="shop.html"><button class="btn-primary">Shop Now</button></a>
+    </header>
+
+    <!-- FEATURES -->
+    <div class="container"
+        style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; text-align:center; margin-top:40px;">
+        <div style="flex:1; min-width:250px; padding:20px; box-shadow:var(--shadow-sm); background:white;">
+            <h3 style="color:var(--secondary);">100% Organic</h3>
+            <p>Certified natural produce.</p>
+        </div>
+        <div style="flex:1; min-width:250px; padding:20px; box-shadow:var(--shadow-sm); background:white;">
+            <h3 style="color:var(--secondary);">Premium Grade</h3>
+            <p>Hand-picked for quality.</p>
+        </div>
+        <div style="flex:1; min-width:250px; padding:20px; box-shadow:var(--shadow-sm); background:white;">
+            <h3 style="color:var(--secondary);">Pan-India Delivery</h3>
+            <p>Fast shipping everywhere.</p>
+        </div>
+    </div>
+
+    <!-- BEST SELLERS -->
+    <div class="container">
+        <h2 class="section-title">Best Sellers</h2>
+        <div id="product-grid" class="grid">
+            <!-- JS Populated -->
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <a href="shop.html"><button class="btn-primary">View All Products</button></a>
+        </div>
+    </div>
+    <!-- ... existing "View All Products" button container above ... -->
+
+    <!-- NEW SECTION 1: CUSTOMER REVIEWS -->
+    <!-- ... "View All Products" button container above ... -->
+
+    <!-- NEW SECTION: THE KAJUS DIFFERENCE (Benefits) -->
+    <div class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">The KAJUS Standard</h2>
+            <div class="benefits-grid">
+
+                <!-- Benefit 1 -->
+                <div class="benefit-card">
+                    <div class="b-icon">🌱</div>
+                    <h3>Farm to Table</h3>
+                    <p>Sourced directly from certified organic orchards, ensuring maximum freshness and zero middlemen.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card">
+                    <div class="b-icon">⚙️</div>
+                    <h3>Laser Sorted</h3>
+                    <p>Every nut goes through rigorous 3-step grading to ensure uniform size and perfect texture.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card">
+                    <div class="b-icon">🛡️</div>
+                    <h3>Vacuum Sealed</h3>
+                    <p>Nitrogen-flushed packaging locks in the crunch and flavor for up to 12 months.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card">
+                    <div class="b-icon">⚡</div>
+                    <h3>Express Delivery</h3>
+                    <p>Dispatched within 24 hours. We deliver to 19,000+ pincodes across India.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER BANNER (Keep this as is) -->
+    <!-- ... -->
+
+    <!-- NEW SECTION 2: NEWSLETTER BANNER -->
+    <section class="newsletter-banner">
+        <div class="container newsletter-content">
+            <div class="news-text">
+                <h2>Join the KAJUS Family</h2>
+                <p>Subscribe for exclusive offers, healthy recipes, and new harvest alerts.</p>
+            </div>
+            <form class="news-form" onsubmit="newsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ... Footer is below this ... -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <div class="logo" style="color:white; margin-bottom:15px;">KAJUS<span>.</span></div>
+                <p>Bringing health and heritage to your home.</p>
+            </div>
+            <div>
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="#">Offers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
